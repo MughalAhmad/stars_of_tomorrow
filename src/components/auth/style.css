@@ -1,0 +1,11 @@
+  @font-face{
+    font-family: Borna;
+    src:url('font/borna-medium-webfont.ttf')
+  }
+
+ 
+
+
+  .font{
+    font-family: Borna;
+  }
