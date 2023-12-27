@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      manrope:['Manrope'],
+      outfit:['Outfit'],
+      
+    }
   },
   plugins: [],
 }
