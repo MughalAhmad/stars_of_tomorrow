@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "../style.css";
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
+  const navigate =useNavigate()
+
   return (
     <>
       <h3 className=" font-thin text-5xl mb-1 ">Login to be</h3>
@@ -34,14 +37,22 @@ const Login = () => {
 <p className="font-outfit text-[#908F94] ml-2">Remember me</p>
         </div>
         <div className="w-1/2 flex justify-end ">
-<p className="text-[#AE70FF] font-outfitn cursor-pointer">Recovery Password?</p>
+<p className="text-[#AE70FF] font-outfitn cursor-pointer"
+onClick={()=>{
+  navigate("/Forgot")
+}}
+>Recovery Password?</p>
 </div>
       </div>
       <div className="bg-[#AE70FF] w-60 h-11 rounded-full flex justify-center items-center cursor-pointer">
         <button className="text-white">Next Page</button>
         <img src="assets/pic4.svg" alt="none" className="ml-5" />
       </div>
-      <p className="text-[#908F94] font-outfit mt-5">Join with us? <span className="text-[#AE70FF] font-outfit cursor-pointer">Create account it’s free</span></p>
+      <p className="text-[#908F94] font-outfit mt-5">Join with us? <span className="text-[#AE70FF] font-outfit cursor-pointer"
+      onClick={()=>{
+        navigate("/Register")
+      }}
+      >Create account it’s free</span></p>
     </>
   );
 };

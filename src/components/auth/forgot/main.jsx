@@ -6,11 +6,12 @@ import Step3 from "./step3"
 import Message from "../authComponets/message";
 import LoginRegisterButton from "../authComponets/login-register-button"
 
-
-
-
-
 const MainForgot = () => {
+  const [step,setStep]= useState('STEP1');
+  const updateStep=(newState)=>{
+    setStep(newState)
+  }
+
   return (
     <div className="w-screen h-screen flex relative ">
       <div className="w-1/2 h-full bg-white flex flex-col items-center justify-center">
@@ -19,9 +20,12 @@ const MainForgot = () => {
             <img src="assets/logo.svg" alt="none" />
           </div>
 <div  className="w-full h-3/5">
-<Step1/>
+{/* <Step1/> */}
 {/* <Step2/> */}
 {/* <Step3/> */}
+{step=="STEP1" && <Step1 next={updateStep} />}
+  {step=="STEP2" && <Step2 next={updateStep} />}
+  {step=="STEP3" && <Step3 next={updateStep} />}
 
 </div>
          
