@@ -17,11 +17,11 @@ const LoginRegisterButton = () => {
     option=="Login"?navigate("/"):navigate("/Register")
   };
   return (
-     <div className="absolute h-16 w-56  right-32 top-14 flex  bg-[#3A445F] justify-between rounded-full items-center">
+     <div className=" h-14 w-56  right-32 top-14 flex  bg-[#3A445F] justify-between rounded-full items-center">
         <img src="assets/pic11.svg" alt="none" className="ml-2 w-10 h-10"/>
       <button
         type="button"
-        className="inline-flex justify-center w-full items-center text-lg font-outfit text-[#D8E0EF] bg-[#3A445F] rounded-full  outline-none "
+        className="inline-flex justify-center w-full items-center md:text-lg text-md font-outfit text-[#D8E0EF]  outline-none "
         id="options-menu"
         onClick={handleToggle}
 

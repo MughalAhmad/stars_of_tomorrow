@@ -20,7 +20,7 @@ const Step2 = ({next,count}) => {
         <p className="font-outfit text-[#908F94] mx-2">Or sign up with email</p>
         <div className="w-64 bg-[#D8E0EF] h-0.5" />
       </div>
-      <div className=" flex flex-col">
+      <div className="flex flex-col">
       <label className="text-[#908F94] font-outfit-400 text-lg my-3">Full Name:</label>
       <input type="text" className="outline-none border-2 h-12 border-[#D8E0EF] rounded-xl pl-6 font " placeholder="Enter Full Name" />
       </div>

@@ -12,7 +12,7 @@ const Login = () => {
       <div className="w-full h-12 rounded-xl border-2 border-[#D8E0EF] cursor-pointer mt-8">
         <div className="w-full h-full flex justify-center items-center">
           <img src="assets/pic6.svg" alt="none" className="w-8 h-8" />
-          <p className=" font text-lg ml-2">Sign In with Google</p>
+          <p className=" font text-lg ml-2">Sign in with Google</p>
         </div>
       </div>
       <div className=" flex justify-center items-center mt-8">
