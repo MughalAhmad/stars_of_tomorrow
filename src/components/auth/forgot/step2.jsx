@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../style.css";
-const Step2 = () => {
+const Step2 = ({next}) => {
     const [otp, setOtp] = useState(new Array(6).fill(""))
   return (
     <div className=" h-full flex flex-col justify-center">
@@ -35,7 +35,11 @@ const Step2 = () => {
         />
       </div>
       </div>
-      <div className="bg-[#AE70FF] w-60 h-11 my-8 rounded-full flex justify-center items-center cursor-pointer">
+      <div className="bg-[#AE70FF] w-60 h-11 my-8 rounded-full flex justify-center items-center cursor-pointer"
+       onClick={()=>{
+        void next("STEP3");
+      }}
+      >
         <button className="text-white">Forgot my password</button>
         <img src="assets/pic4.svg" alt="none" className="ml-5" />
       </div>

@@ -14,16 +14,9 @@ function App() {
     <Routes>
       <Route path="/" element={<MainLogin/>} />
       <Route path="/Register" element={<MainRegister/>} />
+      <Route path="/Forgot" element={<MainForgot/>} />
     </Routes>
   </BrowserRouter>
-//    <>
-   
-//  {loginSignupPage=="Register" && <MainRegister />}
-//   {loginSignupPage=="Login" &&<MainLogin />}
-//   <MainForgot/>
-//   <MainHome/>
-
-//    </>
   )
 }
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../style.css";
-const Step1 = () => {
+const Step1 = ({next}) => {
   return (
     <div className=" h-full flex flex-col justify-center">
       <h3 className=" font-thin text-5xl mb-1 ">Forgot</h3>
@@ -14,7 +14,11 @@ const Step1 = () => {
       <input type="email" className="outline-none border-2 h-12 border-[#D8E0EF] rounded-xl pl-6 font" placeholder="Enter Email Address"/>
       </div>
     
-      <div className="bg-[#AE70FF] w-60 h-11 my-5 rounded-full flex justify-center items-center cursor-pointer">
+      <div className="bg-[#AE70FF] w-60 h-11 my-5 rounded-full flex justify-center items-center cursor-pointer"
+       onClick={()=>{
+        void next("STEP2");
+      }}
+      >
         <button className="text-white">Forgot my password</button>
         <img src="assets/pic4.svg" alt="none" className="ml-5" />
       </div>
