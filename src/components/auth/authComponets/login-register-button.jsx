@@ -5,7 +5,10 @@ import { useNavigate } from 'react-router-dom';
 const LoginRegisterButton = () => {
   const navigate =useNavigate()
     const [isOpen, setIsOpen] = useState(false);
-  const options = ['Login', 'Register'];
+    const options = [
+      'Login', 
+      'Register'
+    ];
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -14,7 +17,7 @@ const LoginRegisterButton = () => {
   const handleSelect = (option) => {
     console.log(`Selected: ${option}`);
     setIsOpen(false);
-    option=="Login"?navigate("/"):navigate("/Register")
+    option=="Login"?navigate("/"):navigate("/register")
   };
   return (
      <div className=" h-14 w-56  right-32 top-14 flex  bg-[#3A445F] justify-between rounded-full items-center">

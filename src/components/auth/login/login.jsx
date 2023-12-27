@@ -39,7 +39,7 @@ const Login = () => {
         <div className="w-1/2 flex justify-end ">
 <p className="text-[#AE70FF] font-outfitn cursor-pointer"
 onClick={()=>{
-  navigate("/Forgot")
+  navigate("/forgot")
 }}
 >Recovery Password?</p>
 </div>
@@ -50,7 +50,7 @@ onClick={()=>{
       </div>
       <p className="text-[#908F94] font-outfit mt-5">Join with us? <span className="text-[#AE70FF] font-outfit cursor-pointer"
       onClick={()=>{
-        navigate("/Register")
+        navigate("/register")
       }}
       >Create account it’s free</span></p>
     </>

@@ -13,10 +13,10 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<MainLogin/>} />
-      <Route path="/Register" element={<MainRegister/>} />
-      <Route path="/Forgot" element={<MainForgot/>} />
+      <Route path="/register" element={<MainRegister/>} />
+      <Route path="/forgot" element={<MainForgot/>} />
     </Routes>
-  </BrowserRouter>
+   </BrowserRouter>
   )
 }
 
