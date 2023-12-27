@@ -10,8 +10,12 @@ import LoginRegisterButton from "../authComponets/login-register-button"
 
 const MainRegister = () => {
   const [step,setStep]= useState('STEP1');
+  const [stepCount,setStepCount] = useState(1);
   const updateStep=(newState)=>{
     setStep(newState)
+  }
+  const updateStepCount=(newState)=>{
+    setStepCount(newState)
   }
   
   return (
@@ -24,31 +28,31 @@ const MainRegister = () => {
           <div className=" w-full h-32 flex items-center">
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step1</span>
-              <div class="w-28 h-2 bg-[#D8E0EF] rounded-full "></div>
+              <div class={`w-28 h-2  ${stepCount>=1 ? 'bg-[#AE70FF]' : 'bg-[#D8E0EF]'} rounded-full`}></div>
             </div>
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step2</span>
-              <div class="w-28 h-2 bg-[#D8E0EF] rounded-full "></div>
+              <div class={`w-28 h-2  ${stepCount>=2 ? 'bg-[#AE70FF]' : 'bg-[#D8E0EF]'} rounded-full`}></div>
             </div>
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step3</span>
-              <div class="w-28 h-2 bg-[#D8E0EF] rounded-full "></div>
+              <div class={`w-28 h-2  ${stepCount>=3 ? 'bg-[#AE70FF]' : 'bg-[#D8E0EF]'} rounded-full`}></div>
             </div>
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step4</span>
-              <div class="w-28 h-2 bg-[#D8E0EF] rounded-full "></div>
+              <div class={`w-28 h-2  ${stepCount>=4 ? 'bg-[#AE70FF]' : 'bg-[#D8E0EF]'} rounded-full`}></div>
             </div>
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step5</span>
-              <div class="w-28 h-2 bg-[#D8E0EF] rounded-full "></div>
+              <div class={`w-28 h-2  ${stepCount>=5 ? 'bg-[#AE70FF]' : 'bg-[#D8E0EF]'} rounded-full`}></div>
             </div>
           </div>
 <div>
-  {step=="STEP1" && <Step1 next={updateStep}/> }
-  {step=="STEP2" && <Step2 next={updateStep}/>}
-  {step=="STEP3" && <Step3 next={updateStep}/>}
-  {step=="STEP4" && <Step4 next={updateStep}/>}
-  {step=="STEP5" && <Step5 next={updateStep}/>}
+  {step=="STEP1" && <Step1 next={updateStep} count={updateStepCount}/>}
+  {step=="STEP2" && <Step2 next={updateStep} count={updateStepCount}/>}
+  {step=="STEP3" && <Step3 next={updateStep} count={updateStepCount}/>}
+  {step=="STEP4" && <Step4 next={updateStep} count={updateStepCount}/>}
+  {step=="STEP5" && <Step5 next={updateStep} count={updateStepCount}/>}
 </div>
          
         

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../style.css";
-const Step2 = ({next}) => {
+const Step2 = ({next,count}) => {
   return (
     <>
       <h3 className=" font-thin text-5xl mb-1 ">Register to be</h3>
@@ -36,6 +36,7 @@ const Step2 = ({next}) => {
       <div className="border-2 border-[#AE70FF] w-60 h-11 rounded-full flex justify-center items-center mr-6 cursor-pointer"
       onClick={()=>{
         void next("STEP1")
+        void count(1)
       }}
       >
       <img src="assets/pic7.svg" alt="none" className="mr-5" />
@@ -44,6 +45,7 @@ const Step2 = ({next}) => {
       <div className="bg-[#AE70FF] w-60 h-11 rounded-full flex justify-center items-center cursor-pointer"
       onClick={()=>{
         void next("STEP3")
+        void count(3)
       }}
       >
         <button className="text-white">Next Page</button>

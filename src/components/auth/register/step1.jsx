@@ -1,6 +1,6 @@
 import {useState} from "react";
 import "../style.css";
-const Step1 = ({next}) => {
+const Step1 = ({next,count}) => {
   const [selectRoleColor, setSelectRoleColor] = useState("1");
   const handleSelectRole=(val)=>{
     if(val==="model"){
@@ -108,6 +108,7 @@ const Step1 = ({next}) => {
           <div className="bg-[#AE70FF] w-60 h-11 rounded-full flex justify-center items-center mt-5 cursor-pointer"
           onClick={()=>{
             void next("STEP2")
+            void count(2)
           }}
           >
             <button className="text-white">Next Page</button>

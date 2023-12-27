@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../style.css";
-const Step5 = () => {
+const Step5 = ({next,count}) => {
+  console.log(count);
   return (
     <>
       <h3 className=" font-thin font text-5xl mb-1 ">Congratulations</h3>
@@ -27,7 +28,12 @@ const Step5 = () => {
         </div>
       </div> 
       <div className=" h-20 flex items-center mt-3">
-      <div className="border-2 border-[#AE70FF] w-60 h-11 rounded-full flex justify-center items-center mr-6 cursor-pointer">
+      <div className="border-2 border-[#AE70FF] w-60 h-11 rounded-full flex justify-center items-center mr-6 cursor-pointer"
+      onClick={()=>{
+        void next("STEP1")
+        void count(1)
+      }}
+      >
       <img src="assets/pic7.svg" alt="none" className="mr-5" />
         <button className="text-[#AE70FF]">Back to main page</button>
       </div>

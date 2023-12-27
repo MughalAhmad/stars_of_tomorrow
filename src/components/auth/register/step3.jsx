@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "../style.css";
-const Step3 = ({next}) => {
+const Step3 = ({next,count}) => {
   const [startDate, setStartDate] = useState(null);
 
   return (
@@ -23,6 +23,7 @@ const Step3 = ({next}) => {
       <div className="border-2 border-[#AE70FF] w-60 h-11 rounded-full flex justify-center items-center mr-6 cursor-pointer"
       onClick={()=>{
         void next("STEP2")
+        void count(2)
       }}
       >
       <img src="assets/pic7.svg" alt="none" className="mr-5" />
@@ -31,6 +32,7 @@ const Step3 = ({next}) => {
       <div className="bg-[#AE70FF] w-60 h-11 rounded-full flex justify-center items-center cursor-pointer"
       onClick={()=>{
         void next("STEP4")
+        void count(4)
       }}
       >
         <button className="text-white">Next Page</button>
