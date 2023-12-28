@@ -1,20 +1,17 @@
 import { useState } from "react";
-import Login from "./components/auth/login";
-import Signup from "./components/auth/signup";
-import MainRegister from "./components/auth/register/main";
-import MainLogin from "./components/auth/login/main";
-import MainForgot from "./components/auth/forgot/main";
-import MainHome from "./components/homeScreen/main";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./views/login";
+import Register from "./views/register";
+import Forgot from "./views/forgot"
 
 function App() {
 
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<MainLogin/>} />
-      <Route path="/register" element={<MainRegister/>} />
-      <Route path="/forgot" element={<MainForgot/>} />
+      <Route path="/" element={<Login/>} />
+      <Route path="/register" element={<Register/>} />
+      <Route path="/forgot" element={<Forgot/>} />
     </Routes>
    </BrowserRouter>
   )

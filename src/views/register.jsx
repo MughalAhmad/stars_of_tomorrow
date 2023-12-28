@@ -1,14 +1,14 @@
 import { useState } from "react";
-import "../style.css";
-import Step1 from "./step1";
-import Step2 from "./step2";
-import Step3 from "./step3";
-import Step4 from "./step4";
-import Step5 from "./step5";
-import Message from "../authComponets/message";
-import LoginRegisterButton from "../authComponets/login-register-button";
+import "../styles/style.css";
+import Step1 from "../components/register/step1";
+import Step2 from "../components/register/step2";
+import Step3 from "../components/register/step3";
+import Step4 from "../components/register/step4";
+import Step5 from "../components/register/step5";
+import Message from "../components/authLayout/message";
+import LoginRegisterButton from "../components/authLayout/login-register-button";
 
-const MainRegister = () => {
+const Register = () => {
   const [step, setStep] = useState("STEP1");
   const [stepCount, setStepCount] = useState(1);
   const updateStep = (newState) => {
@@ -111,4 +111,4 @@ const MainRegister = () => {
   );
 };
 
-export default MainRegister;
+export default Register;

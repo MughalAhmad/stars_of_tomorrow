@@ -1,10 +1,11 @@
 import { useState } from "react";
-import "../style.css";
-import Login from "./login";
-import Message from "../authComponets/message";
-import LoginRegisterButton from "../authComponets/login-register-button";
+import "../styles/style.css";
+import LoginForm from "../components/login/loginForm";
+// import Login from "./login";
+import Message from "../components/authLayout/message";
+import LoginRegisterButton from "../components/authLayout/login-register-button";
 
-const MainLogin = () => {
+const Login = () => {
   return (
     <div className="w-screen h-screen flex relative ">
           <div className="w-full flex flex-row justify-between md:px-40 px-4 mt-5 z-30 absolute top-0">
@@ -14,7 +15,7 @@ const MainLogin = () => {
       <div className="md:w-1/2 w-full h-full bg-white flex flex-col items-center justify-center md:mt-0 mt-10">
         <div className="md:w-9/12 w-full h-full md:ml-10 p-4">
           <div className="h-full flex flex-col justify-center">
-            <Login />
+            <LoginForm />
           </div>
         </div>
       </div>
@@ -41,4 +42,4 @@ const MainLogin = () => {
   );
 };
 
-export default MainLogin;
+export default Login;

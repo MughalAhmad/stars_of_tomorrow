@@ -1,5 +1,5 @@
 import {useState} from "react";
-import "../style.css";
+import "../../styles/style.css";
 const Step1 = ({next,count}) => {
   const [role, setRole] = useState("");
 
