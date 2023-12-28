@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "../style.css";
+import "../../styles/style.css";
 import { useNavigate } from 'react-router-dom';
-const Login = () => {
+const LoginForm = () => {
   const navigate =useNavigate()
 
   return (
@@ -57,4 +57,4 @@ onClick={()=>{
   );
 };
 
-export default Login;
+export default LoginForm;

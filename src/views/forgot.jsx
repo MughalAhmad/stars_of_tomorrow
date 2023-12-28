@@ -1,12 +1,12 @@
 import {useState} from "react";
-import "../style.css";
-import Step1 from "./step1";
-import Step2 from "./step2"
-import Step3 from "./step3"
-import Message from "../authComponets/message";
-import LoginRegisterButton from "../authComponets/login-register-button"
+import "../styles/style.css";
+import Step1 from "../components/forgot/step1";
+import Step2 from "../components/forgot/step2"
+import Step3 from "../components/forgot/step3"
+import Message from "../components/authLayout/message";
+import LoginRegisterButton from "../components/authLayout/login-register-button"
 
-const MainForgot = () => {
+const Forgot = () => {
   const [step,setStep]= useState('STEP1');
   const updateStep=(newState)=>{
     setStep(newState)
@@ -56,4 +56,4 @@ const MainForgot = () => {
   );
 };
 
-export default MainForgot;
+export default Forgot;

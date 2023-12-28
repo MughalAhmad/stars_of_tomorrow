@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import "../style.css";
+import "../../styles/style.css"
 import { useNavigate } from 'react-router-dom';
 
 const LoginRegisterButton = () => {
@@ -47,7 +47,7 @@ const LoginRegisterButton = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute w-56 right-0 mt-40 space-y-2 origin-top-right bg-white border border-gray-300 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <div className="absolute w-56 right-30 mt-40 space-y-2 origin-top-right bg-white border border-gray-300 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           {options.map((option) => (
             <div
               key={option}

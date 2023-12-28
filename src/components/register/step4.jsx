@@ -1,6 +1,6 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
-import "../style.css";
+import "../../styles/style.css";
 const Step4 = ({next,count}) => {
   const [startDate, setStartDate] = useState(null);
 
