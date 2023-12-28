@@ -1,22 +1,10 @@
 import {useState} from "react";
 import "../style.css";
 const Step1 = ({next,count}) => {
-  const [selectRoleColor, setSelectRoleColor] = useState("1");
-  const handleSelectRole=(val)=>{
-    if(val==="model"){
-      setSelectRoleColor("1")
-    }
-    else if(val === "agency"){
-      setSelectRoleColor("2")
-    }
-    else{
-      setSelectRoleColor("3")
-    }
-  }
+  const [role, setRole] = useState("");
+
   return (
-   <>
-          
-          
+   <>         
 
           <h1 className="font-medium font text-6xl ">Get more jealous</h1>
           <h3 className="font-normal font text-4xl ">
@@ -37,9 +25,10 @@ const Step1 = ({next,count}) => {
               id="model"
                 type="radio"
                 name="role"
+                {...role=='model'? "checked":''} 
                 className="w-1/2 h-24 rounded-full peer/model"
                 onClick={()=>{
-                  handleSelectRole("model")
+                  setRole("model")
                 }}
               />
             </div>
@@ -64,7 +53,7 @@ const Step1 = ({next,count}) => {
                 name="role"
                 className="w-1/2 h-24 bg-slate-600 rounded-full"
                 onClick={()=>{
-                  handleSelectRole("agency")
+                  setRole("agency")
                 }}
               />
             </div>
@@ -91,7 +80,7 @@ const Step1 = ({next,count}) => {
                 name="role"
                 className="w-1/2 h-24 bg-slate-600 rounded-full"
                 onClick={()=>{
-                  handleSelectRole("director")
+                  setRole("director")
                 }}
               />
             </div>
@@ -108,15 +97,16 @@ const Step1 = ({next,count}) => {
               <img src="assets/pic5.svg" alt="none" />
             </div>
           </label>
-          <div className="bg-[#AE70FF] w-60 h-11 rounded-full flex justify-center items-center mt-5 cursor-pointer"
-          onClick={()=>{
-            void next("STEP2")
-            void count(2)
-          }}
-          >
-            <button className="text-white">Next Page</button>
+            <button
+            onClick={()=>{
+              void next("STEP2")
+              void count(2)
+            }}            
+            disabled={!(role)}
+            className="text-white bg-[#AE70FF] rounded-full flex justify-center items-center mt-5 px-8 py-2 cursor-pointer disabled:bg-gray">
+              <span>Next Page</span>
             <img src="assets/pic4.svg" alt="none" className="ml-5" />
-          </div>
+            </button>
           </>
   );
 };

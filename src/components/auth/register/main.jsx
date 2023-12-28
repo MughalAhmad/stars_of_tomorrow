@@ -31,7 +31,7 @@ const MainRegister = () => {
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step1</span>
               <div
-                class={`w-28 h-2  ${
+                className={`w-28 h-2  ${
                   stepCount >= 1 ? "bg-[#AE70FF]" : "bg-[#D8E0EF]"
                 } rounded-full`}
               ></div>
@@ -39,7 +39,7 @@ const MainRegister = () => {
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step2</span>
               <div
-                class={`w-28 h-2  ${
+                className={`w-28 h-2  ${
                   stepCount >= 2 ? "bg-[#AE70FF]" : "bg-[#D8E0EF]"
                 } rounded-full`}
               ></div>
@@ -47,7 +47,7 @@ const MainRegister = () => {
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step3</span>
               <div
-                class={`w-28 h-2  ${
+                className={`w-28 h-2  ${
                   stepCount >= 3 ? "bg-[#AE70FF]" : "bg-[#D8E0EF]"
                 } rounded-full`}
               ></div>
@@ -55,7 +55,7 @@ const MainRegister = () => {
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step4</span>
               <div
-                class={`w-28 h-2  ${
+                className={`w-28 h-2  ${
                   stepCount >= 4 ? "bg-[#AE70FF]" : "bg-[#D8E0EF]"
                 } rounded-full`}
               ></div>
@@ -63,7 +63,7 @@ const MainRegister = () => {
             <div className="w-32 h-12 justify-evenly pl-1 flex flex-col">
               <span className="ml-2 text-[#242D43] font-manrope">Step5</span>
               <div
-                class={`w-28 h-2  ${
+                className={`w-28 h-2  ${
                   stepCount >= 5 ? "bg-[#AE70FF]" : "bg-[#D8E0EF]"
                 } rounded-full`}
               ></div>
