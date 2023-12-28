@@ -1,8 +1,8 @@
 import {useState} from "react";
 import "../styles/style.css";
-import Step1 from "../components/forgot/step1";
-import Step2 from "../components/forgot/step2"
-import Step3 from "../components/forgot/step3"
+import Email from "../components/forgot/email";
+import OTP from "../components/forgot/otp"
+import Thanks from "../components/forgot/thanks"
 import Message from "../components/authLayout/message";
 import LoginRegisterButton from "../components/authLayout/login-register-button"
 
@@ -20,12 +20,9 @@ const Forgot = () => {
             <img src="assets/logo.svg" alt="none" />
           </div>
 <div  className="w-full h-3/5">
-{/* <Step1/> */}
-{/* <Step2/> */}
-{/* <Step3/> */}
-{step=="STEP1" && <Step1 next={updateStep} />}
-  {step=="STEP2" && <Step2 next={updateStep} />}
-  {step=="STEP3" && <Step3 next={updateStep} />}
+  {step=="STEP1" && <Email next={updateStep} />}
+  {step=="STEP2" && <OTP next={updateStep} />}
+  {step=="STEP3" && <Thanks next={updateStep} />}
 
 </div>
          

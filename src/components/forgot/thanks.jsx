@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../../styles/style.css";
-const Step3 = () => {
+const Thanks = () => {
     const [otp, setOtp] = useState(new Array(6).fill(""))
   return (
     <div className=" h-full flex flex-col justify-center">
@@ -18,4 +18,4 @@ const Step3 = () => {
   );
 };
 
-export default Step3;
+export default Thanks;
